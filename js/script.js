@@ -11,20 +11,18 @@ const storyText = document.getElementById("storyText")
 const yesBtn = document.getElementById("yesBtn")
 const noBtn = document.getElementById("noBtn")
 
-
 /* MUSIC PLAYLIST */
 
 const playlist = [
-"music/Ho.mp3",
-"music/How.mp3",
-"music/Ye.mp3",
-"music/Yes.mp3"
+"/music/Ho.mp3",
+"/music/How.mp3",
+"/music/Ye.mp3",
+"/music/Yes.mp3"
 ]
 
 let songIndex = 0
 
-
-/* STORY FLOW */
+/* STORY */
 
 const story = [
 
@@ -82,8 +80,6 @@ const story = [
 
 let index = 0
 
-
-
 /* START EXPERIENCE */
 
 playBtn.addEventListener("click", () => {
@@ -99,9 +95,7 @@ storyText.innerText = story[index]
 
 })
 
-
-
-/* TAP TO CONTINUE STORY */
+/* TAP STORY */
 
 storyPage.addEventListener("click", () => {
 
@@ -120,9 +114,7 @@ questionPage.classList.add("active")
 
 })
 
-
-
-/* MUSIC SEQUENCE */
+/* PLAYLIST */
 
 player.addEventListener("ended", () => {
 
@@ -131,6 +123,7 @@ songIndex++
 if(songIndex < playlist.length){
 
 player.src = playlist[songIndex]
+
 player.play()
 
 }
@@ -143,8 +136,6 @@ player.loop = true
 
 })
 
-
-
 /* YES BUTTON */
 
 yesBtn.addEventListener("click", () => {
@@ -154,15 +145,14 @@ yesPage.classList.add("active")
 
 })
 
-
-
-/* NO BUTTON RUNS AWAY */
+/* NO BUTTON RUN AWAY */
 
 noBtn.addEventListener("mouseover", () => {
 
-noBtn.style.position = "absolute"
+noBtn.style.position="absolute"
 
-noBtn.style.top = Math.random()*80 + "%"
-noBtn.style.left = Math.random()*80 + "%"
+noBtn.style.top=Math.random()*80+"%"
+
+noBtn.style.left=Math.random()*80+"%"
 
 })

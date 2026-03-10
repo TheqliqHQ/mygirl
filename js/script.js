@@ -14,10 +14,10 @@ const noBtn = document.getElementById("noBtn")
 /* MUSIC PLAYLIST */
 
 const playlist = [
-"/music/Ho.mp3",
-"/music/How.mp3",
-"/music/Ye.mp3",
-"/music/Yes.mp3"
+"/Music/Ho.mp3",
+"/Music/How.mp3",
+"/Music/Ye.mp3",
+"/Music/Yes.mp3"
 ]
 
 let songIndex = 0
